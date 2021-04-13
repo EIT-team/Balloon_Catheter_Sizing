@@ -99,3 +99,21 @@ gmsh.finalize()
 # meshio saves it better to vtu (binary compressed) this makes it easy to load into paraview
 m = meshio.Mesh.read(os.path.join(path,outname + ".msh"))
 m.write(os.path.join(path, outname + ".vtu"))
+
+
+# MESHIO ISSUE MATLAB PYTHON:
+
+# - terminal: which python 3
+# - copy paste the path
+# - pyenv(‘Version’, ‘path’) on Matlab
+# - close Matlab
+# - Reopen matlab and type pyenv check that it’s the correct python
+# - terminal: pip3 install meshio
+# - terminal: python3
+# - terminal: import meshio
+# - run code
+
+
+
+
+
