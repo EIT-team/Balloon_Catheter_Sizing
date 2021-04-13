@@ -163,3 +163,17 @@ img = mk_image(MDL,S);
 img.fwd_solve.get_all_meas = 1;
 % solve the fwd model for this img to get baseline voltages
 v_baseline = fwd_solve(img)
+
+
+
+%% SENSITIVITY 
+
+% get the jacobian for this model
+%J= calc_jacobian(img);
+
+% % scale for element size
+%J=J./(get_elem_volume(img.fwd_model)');
+%J=abs(J);
+
+%name = strcat(shape, 'protocol1_40mm.vtu')
+%meshio.write(name,fmdl.nodes,fmdl.elems,{J},{'J'});
