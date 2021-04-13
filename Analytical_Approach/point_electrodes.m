@@ -19,13 +19,6 @@ gnd_dist=sqrt(sum((MDL.nodes - gnd_pos).^2,2));
 MDL.gnd_node = gnd_node;
 
 % Define electrodes z direction
-
-% we are going to use "point" electrodes to start with, these are on a
-% single node only. eidors requires a stucture with the surface nodes for
-% each electrode, and the contact impedance
-
-% as an example, let's define a ring of electrodes at Z =0 as per Sainas
-% example
 elecRingZ=[0.0025, 0.0125];
 % radius of the inner bore hole
 radius_centre=0.00235; % 0.00235
@@ -110,16 +103,7 @@ Amp=141e-6; % Current amplitude in Amps this is the most you can inject below 1 
 
 N_elec=size(elec_pos,1);
 
-% EIT measurements are defined in the following way:
-% CS+ CS- V+ V-
-% 1,2,1,6
-% i.e. inject between 1 and 2, measure 1 referenced to 6 etc.
-
-% in reality there are many factors that go into deciding the protocol
-% choice, like hardware, time and noise constraints. here we can just do
-% all of them - part of the project is to find which ones are important
-
-% here we can just find unique possible electrode pairs
+% find unique possible electrode pairs
 UniquePairs = nchoosek(1:N_elec,2);
 nPairs=size(UniquePairs,1);
 % measurements can be the same too
