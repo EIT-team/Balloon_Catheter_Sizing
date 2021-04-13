@@ -4,7 +4,7 @@
 
 ## PYTHON gmsh ##
 ### Mesh ###
-- Python gmsh (mesh generation) based on tutorial t1 https://gitlab.onelab.info/gmsh/gmsh/-/blob/master/tutorial/python/t10.py 
+- Python gmsh (mesh generation) based on tutorial t10 https://gitlab.onelab.info/gmsh/gmsh/-/blob/master/tutorial/python/t10.py 
 - Models step files (modelled on Fusion 360) into vtu files (these are used with point electrodes) 9FR, 14FR, 16FR - including fine and coarse models
 
 
