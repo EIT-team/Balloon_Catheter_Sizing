@@ -15,16 +15,16 @@ Run startup.m
 ### Analytical Approach ###
 - Point_electrodes:
   1. Get models vtu in right directory
-  2. Run with 22 electrodes for 9FR, 34 electrodes for 14FR, 38 electrodes for 16FR
+  2. Run with 22 electrodes for 9FR, 34 electrodes for 14FR, 38 electrodes for 16FR (use corresponding protocol excel file)
 - Surface_electrodes_netgen:
-  1. Run with 16 electrodes if electrodes placed with 2*pi (this does not work for 16FR) or 8 electrodes if electrodes placed with pi
+  1. Run with 16 electrodes if electrodes placed with 2*pi (this does not work for 16FR) or 8 electrodes if electrodes placed with pi (use corresponding protocol excel file)
 
 
 ### EIT RECONSTRUCTIONS ###
 - EIT_reconstructions_3D_abs_point:
   1. Use 8 electrodes per ring and protocol sp_mp1920.xlsx
   2. Change corresponding coarse and fine models if reconstructing for 9FR, 14FR or 16FR
-- Hyperparameter_matrix 
+- Hyperparameter matrix (heuristic approach)
 - test_reconstruction_blob
 - Additional protocols (560 measurements, 56 measurements)
 
