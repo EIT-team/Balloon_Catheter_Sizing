@@ -11,12 +11,13 @@
 
 ## EIDORS http://eidors3d.sourceforge.net/ ##
 Download Netgen and run startup.m
+Prepare models vtu and excel files needed in right directory
 
 ### Analytical Approach ###
-- Point_electrodes:
+- Point electrodes:
   1. Get models vtu in right directory
   2. Run with 22 electrodes for 9FR, 34 electrodes for 14FR, 38 electrodes for 16FR (use corresponding protocol excel file)
-- Surface_electrodes_netgen:
+- Surface electrodes Netgen:
   1. Run with 16 electrodes if electrodes placed with 2*pi (this does not work for 16FR) or 8 electrodes if electrodes placed with pi (use corresponding protocol excel file)
 - Sensitivity analysis calculating Jacobian and observing on ParaView
 
@@ -26,7 +27,7 @@ Download Netgen and run startup.m
   1. Use 8 electrodes per ring and protocol sp_mp1920.xlsx
   2. Change corresponding coarse and fine models if reconstructing for 9FR, 14FR or 16FR
 - Hyperparameter matrix (heuristic approach)
-- test_reconstruction_blob
+- Test Reconstruction Blob
 - Additional protocols (560 measurements, 56 measurements)
 
 
