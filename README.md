@@ -34,3 +34,4 @@ Run startup.m
 ### EXPERIMENTAL WITH ARDUINO ###
 - Two-electrode method
 - Four-electrode method
+- Test multiplexers
