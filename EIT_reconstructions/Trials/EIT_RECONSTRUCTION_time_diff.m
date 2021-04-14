@@ -39,7 +39,7 @@ plot3(elec_pos(:,1),elec_pos(:,2),elec_pos(:,3), '.','Markersize',50);
 hold off
 
 % create electrode structure
-z_contact=1e-3;
+
 elec_radius = .008;
 for iElec = 1:size(elec_pos,1)
     
