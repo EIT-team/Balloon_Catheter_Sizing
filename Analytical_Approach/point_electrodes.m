@@ -77,12 +77,7 @@ for i = 1:length(electrodes)
     y = M.vtx(MDL.electrode(i).nodes, 2);
     phi_electrodes(i) = atan2(x,y);
 end
-% 
-% for i = 1:length(electrodes)
-%     if i < 44
-%         phi_electrodes_diff(i) = phi_electrodes(i+1) - phi_electrodes(i);
-%     end
-% end 
+
 
 figure
 show_fem(MDL)
@@ -115,6 +110,12 @@ for iInj=1:nPairs
 Protocol=[Protocol; repmat(UniquePairs(iInj,:),[nPairs,1]) UniquePairs];
 
 end
+
+% Protocol with 2 electrode per ring 
+%Protocol= [1 3, 2 4] % [1 3, 1 3] 1 pair -> analytical approach
+%[stim]= stim_meas_list( Protocol,N_elec,Amp);
+%MDL.stimulation=stim;
+
 
 Protocol = readmatrix('15mm_height/pointed16FR.xlsx', 'Range', 'A1:D10') % A1:D9, 6, 10
 stim = stim_meas_list(Protocol, N_elec, Amp);
