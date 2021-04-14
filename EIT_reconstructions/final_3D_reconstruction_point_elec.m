@@ -88,9 +88,8 @@ for iInj=1:nPairs
 
 end
 
-% Protocol = [3 25, 4 26]
-% Protocol = readmatrix('sp_mp.xlsx', 'Range', 'A1:D462') % A1:D462 
-Protocol = readmatrix('sp_mp1920.xlsx', 'Range', 'A1:D1920'); % A1:D462 
+
+Protocol = readmatrix('sp_mp1920.xlsx', 'Range', 'A1:D1920');
 stim = stim_meas_list(Protocol, N_elec, Amp);
 MDL.stimulation=stim;
 
@@ -173,7 +172,7 @@ fine_mdl.normalize_measurements = 0;
 
 % Convert protocol file to EIDORS stim patterns
 
-Amp=141e-6; % Current amplitude in Amps this is the most you can inject below 1 kHz, but we are not really limited to that
+Amp=141e-6; % Current amplitude in Amps 
 
 N_elec=size(elec_pos,1);
 
@@ -197,36 +196,7 @@ fine_mdl=remove_unused_nodes(fine_mdl);
 figure
 show_fem(fine_mdl, 3)
 title('Fine model circular 20mm diameter', 'Fontsize', 20)
-%% PREPARE INV MODEL
 
-% inv_model =meshio.read('model_for_reconstruction4-X3DIAM.vtu'); 
-% save('model_infinite', 'inv_model');
-% inv_mdl=eidors_obj('inv_model','balloonx3');
-% inv_mdl.nodes = inv_model.vtx./1000; % the 3d coordinates of the nodes IN METERS
-% inv_mdl.elems = inv_model.cells(4).tri; % which nodes create a tetrahedron 
-% [srf2, idx2] = find_boundary(inv_model.cells(4).tri);
-% inv_mdl.boundary = srf2;
-% gnd_pos=[0,-0.01,0];
-% gnd_dist=sqrt(sum((inv_mdl.nodes - gnd_pos).^2,2));
-% [~, gnd_node] = min(gnd_dist);
-% inv_mdl.gnd_node = gnd_node;
-% 
-% 
-% % loop through each electrode
-% for iElec = 1:size(elec_pos,1)
-%     
-%     %assign conductivity to structure
-%     electrodes2(iElec).z_contact= z_contact;
-%     
-%     % find surface nodes within electrode radius
-%     edist = sqrt(sum((inv_mdl.nodes - elec_pos(iElec,:)).^2,2));
-%     [~,enode2] = min(edist);
-% 
-%     electrodes2(iElec).nodes = enode2;
-% end
-% 
-% % add electrode strucutre to model struct
-% inv_mdl.electrode =     electrodes2;
 
 %% Create coarse model with less elements
 coarse_model =meshio.read('15mm_height/9fr/coarsemodel20mmcir.vtu'); 
@@ -302,18 +272,18 @@ hold off
 % meshio.write('eit_3D_abs_reconst.vtu',coarse_mdl.nodes, coarse_mdl.elems, {img4.elem_data},{'elem_data'});
 
 
-%%
-% coarse_recon_img= mk_image(coarse_mdl, img4.elem_data);
-% figure
-% show_fem(coarse_recon_img); 
-% hold on
-% eidors_colourbar(coarse_recon_img);
-% title('Coarse model 20mm with reconstructed data - elliptical model 6mm', ...
-% 'Fontsize', 14);
-% xlabel('x (m)')
-% ylabel('y (m)')
-% zlabel('z (m)')
-% set(gca,'FontSize',20)
+%% figure coarse model
+coarse_recon_img= mk_image(coarse_mdl, img4.elem_data);
+figure
+show_fem(coarse_recon_img); 
+hold on
+eidors_colourbar(coarse_recon_img);
+title('Coarse model 20mm with reconstructed data - elliptical model 6mm', ...
+'Fontsize', 14);
+xlabel('x (m)')
+ylabel('y (m)')
+zlabel('z (m)')
+set(gca,'FontSize',20)
 
 %% GET ELEMENTS AND FIND DIMENSIONS
 
@@ -426,10 +396,6 @@ for i_sectors=1:n_sectors
 
 end
 
-% disp('mean')
-% dimensions_sectors_mean'
-% disp('median')
-% dimensions_sectors_median'
 disp('max')
 dimensions_sectors_max'
 disp('max angle')
