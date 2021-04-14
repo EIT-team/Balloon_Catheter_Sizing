@@ -10,8 +10,7 @@
 
 
 ## EIDORS http://eidors3d.sourceforge.net/ ##
-Download Netgen
-Run startup.m
+Download Netgen and run startup.m
 
 ### Analytical Approach ###
 - Point_electrodes:
