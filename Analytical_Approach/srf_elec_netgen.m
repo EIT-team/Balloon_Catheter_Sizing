@@ -96,7 +96,7 @@ for axis_a = axislist;
     fmdl.nodes = fmdl.nodes./1000;
     
     for i=1:n_elec_ring*2
-        fmdl.electrode(i).z_contact= 0.1;
+        fmdl.electrode(i).z_contact= 0.01;
     end
 
 
