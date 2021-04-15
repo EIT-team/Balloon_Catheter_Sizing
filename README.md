@@ -19,7 +19,7 @@
   1. Get models vtu in right directory
   2. Run with 22 electrodes for 9FR, 34 electrodes for 14FR, 38 electrodes for 16FR (use corresponding protocol excel file)
 - Surface electrodes Netgen:
-  1. Run with 16 electrodes if electrodes placed with 2*pi (this does not work for 16FR) or 8 electrodes if electrodes placed with pi (use corresponding protocol excel file)
+  1. Run with 8 electrodes per ring pi (equivalent to 16 electrodes 2pi as only interested in 90-degree-sector); 4 electrodes per ring pi (equivalent to 8 electrodes 2pi); 2 electrodes per ring pi (use corresponding protocol excel file)
 - Sensitivity analysis calculating Jacobian and observing on ParaView
 
 
@@ -32,7 +32,6 @@
 - Additional protocols (560 measurements, 56 measurements)
 - Trials folder with additional codes (e.g. slice reconstruction)
 - Data Plots
-- 
 
 
 ### EXPERIMENTAL WITH ARDUINO ###
