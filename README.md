@@ -10,8 +10,9 @@
 
 
 ## EIDORS http://eidors3d.sourceforge.net/ ##
-Download Netgen and run startup.m
-Prepare models vtu and excel files needed in right directory
+- Download Netgen and run startup.m
+- Prepare models vtu and excel files needed in right directory
+- Change paths in code accordingly
 
 ### Analytical Approach ###
 - Point electrodes:
