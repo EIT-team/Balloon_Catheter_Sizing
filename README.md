@@ -26,10 +26,13 @@
 ### EIT RECONSTRUCTIONS ###
 - EIT_reconstructions_3D_abs_point:
   1. Use 8 electrodes per ring and protocol (stimulation pattern / measurement pattern) file: sp_mp1920.xlsx
-  2. Change corresponding coarse and fine models if reconstructing for 9FR, 14FR or 16FR
+  2. Change corresponding coarse and fine models files if reconstructing for 9FR, 14FR or 16FR
 - Hyperparameter matrix (heuristic approach)
 - Test Reconstruction Blob
 - Additional protocols (560 measurements, 56 measurements)
+- Trials folder with additional codes (e.g. slice reconstruction)
+- Data Plots
+- 
 
 
 ### EXPERIMENTAL WITH ARDUINO ###
