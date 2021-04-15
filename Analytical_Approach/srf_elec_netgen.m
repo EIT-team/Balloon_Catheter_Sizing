@@ -5,9 +5,11 @@ k=0
 
 for axis_a = axislist;
     
-    %outer elliptic cylinder
+    
     height=15;
+    %outer elliptic cylinder
     axis_b = axis_a/2;
+    % circular: axis_b = axis_a
 
     %number of electrodes in a ring
     n_elec_ring = 4; 
@@ -100,7 +102,7 @@ for axis_a = axislist;
     end
 
 
-    mesh element size
+    %mesh element size
     figure
     show_fem(fmdl)
 
@@ -141,9 +143,11 @@ for axis_a = axislist;
     % solve the fwd model for this img to get baseline voltages
     k = k+1;
     
+    
+    v_baseline = fwd_solve(img);
+    V_matrix(:, k) = v_baseline.meas;
+    
     % add noise
-%     v_baseline = fwd_solve(img);
-%     V_matrix(:, k) = v_baseline.meas;
 %     v_noise_40dB  = add_noise(40, v_baseline);
 %     v_noise_40dB_matrix(:,k) = v_noise_40dB.meas;
 %     v_noise_60dB =  add_noise(60, v_baseline);
