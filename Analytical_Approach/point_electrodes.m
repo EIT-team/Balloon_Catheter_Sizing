@@ -12,7 +12,7 @@ MDL.elems = M.cells(4).tri; % which nodes create a tetrahedron
 % specify boundary elements - eidors needs this separately
 [srf, idx] = find_boundary(M.cells(4).tri);
 MDL.boundary = srf;
-gnd_pos=[0,-0.01,0]; % looking at the figure from line 23, around here seems like a good spot
+gnd_pos=[0,-0.01,0]; 
 % find the nearest node to this point
 gnd_dist=sqrt(sum((MDL.nodes - gnd_pos).^2,2));
 [~, gnd_node] = min(gnd_dist);
@@ -94,7 +94,7 @@ MDL.normalize_measurements = 0;
 
 % Convert protocol file to EIDORS stim patterns
 
-Amp=141e-6; % Current amplitude in Amps this is the most you can inject below 1 kHz, but we are not really limited to that
+Amp=141e-6; % Current amplitude in Amps 
 
 N_elec=size(elec_pos,1);
 
@@ -135,10 +135,6 @@ end
 
 S=1.6; % conductivity in S/m this is based on 0.9% saline 
 S_pert=S*1.05;
-
-% Forward model simulates the electric fields in the chosen mesh for chosen
-% electrode and stimulation pattern. This gives you all the voltages
-% measurements you would get in an ideal experiment
 
 % create img object and get "baseline" data. Setting each element to the
 % conductivity S
