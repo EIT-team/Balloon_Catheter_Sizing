@@ -148,10 +148,8 @@ for axis_a = axislist;
     V_matrix(:, k) = v_baseline.meas;
     
     % add noise
-%     v_noise_40dB  = add_noise(40, v_baseline);
-%     v_noise_40dB_matrix(:,k) = v_noise_40dB.meas;
-%     v_noise_60dB =  add_noise(60, v_baseline);
-%     v_noise_60dB_matrix(:,k) = v_noise_60dB.meas;
+
+
 
 end
 
