@@ -3,7 +3,7 @@
 
 ### Mesh with Python Gmsh ###
 - Python gmsh (mesh generation) based on tutorial t10 https://gitlab.onelab.info/gmsh/gmsh/-/blob/master/tutorial/python/t10.py 
-- Models step files (modelled on Fusion 360) into vtu files (these are used with point electrodes) 9FR, 14FR, 16FR - including fine and coarse models
+- Models step files (modelled on Fusion 360) into vtu files (these are used with point electrodes) 9Fr, 14Fr, 16Fr - including fine and coarse models
 
 - Mesh quality obtained with Joe-Liu metric (Download folder https://github.com/fangq/iso2mesh) - also used with NETGEN meshes
 
