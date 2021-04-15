@@ -118,7 +118,7 @@ for axis_a = axislist;
     Amp=141e-6;
     N_elec = iElec;
 
-    Protocol = readmatrix('15mm_height_netgen/srf4elecpi.xlsx', 'Range', 'A1:D1') 
+    Protocol = readmatrix('15mm_height_netgen/srf4elecpi.xlsx', 'Range', 'A1:D2') % change accordingly
     stim = stim_meas_list(Protocol,N_elec, Amp);
     fmdl.stimulation = stim;
 
