@@ -4,6 +4,18 @@
 %% GMSH - Load the vtu mesh into matlab
 % M=meshio.read('15mm_height/TEST_MESH/elliptical15mm_8e.vtu'); % THE MESH IS IN MM
 % save('model5', 'M')
+% create blank fwd object
+% MDL=eidors_obj('fwd_model','BalloonCatheter');
+
+% % specify nodes and triangulation
+% MDL.nodes = M.vtx./1000; % the 3d coordinates of the nodes IN METERS
+% MDL.elems = M.cells(4).tri; % which nodes create a tetrahedron 
+
+
+% quality = meshquality(MDL.nodes, MDL.elems);
+% mean_quality = mean(quality)
+
+
 
 %% NETGEN 
 axislist=[12/2, 13/2, 14/2, 15/2, 16/2, 17/2, 18/2, 19/2, 20/2, 21/2, 22/2, 23/2, 26/2, 29/2, 32/2, 34/2];
@@ -107,21 +119,6 @@ for axis_a = axislist;
     
     fmdl.nodes = fmdl.nodes./1000;
     
-
-
-    % create eidors stucture
-
-    % eidors creates the structures with all the various parameters which we
-    % need to recreate here:
-
-    % this is largely based on mk_fmdl_from_nodes
-
-    % create blank fwd object
-    %fmdl=eidors_obj('fwd_model','BalloonCatheter');
-
-    % specify nodes and triangulation
-    %fmdl.nodes = M.vtx./1000; % the 3d coordinates of the nodes IN METERS
-    %fmdl.elems = M.cells(4).tri; % which nodes create a tetrahedron 
     k = k+1;
     number_elements(:,k) = length(fmdl.elems)
     quality = meshquality(fmdl.nodes, fmdl.elems);
