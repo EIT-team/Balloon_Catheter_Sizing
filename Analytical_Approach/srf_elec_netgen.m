@@ -4,10 +4,10 @@ inner_radius=1.5;
 k=0
 
 for axis_a = axislist;
-    
-    %outer elliptic cylinder
+   
     height=15;
-    axis_b = axis_a;
+    % axis_b = axis_a; % circular
+    axis_b = axis_a/2; % elliptical
 
     %number of electrodes in a ring
     n_elec_ring = 4; % 16elec 2pi => 8elec pi, 
