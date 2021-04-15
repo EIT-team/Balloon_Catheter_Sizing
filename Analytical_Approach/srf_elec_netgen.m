@@ -148,7 +148,10 @@ for axis_a = axislist;
     V_matrix(:, k) = v_baseline.meas;
     
     % add noise 
-
+    % sig= sqrt(norm(v_baseline.meas));
+    % m= size(v_baseline.meas,1);
+    % v_baseline.meas = v_baseline.meas + .01*sig*randn(m,1); %20dB noise
+    % v_matrix_noise(:,k) = v_baseline.meas;
 end
 
 %%
