@@ -87,12 +87,12 @@ void loop() {
 
   delay(500);
   
-  // Open channels C0-C8
-  selectMux1Ch(0);
-  selectMux2Ch(8);
+  // Open channels C8-C0, C10-C2, C12-C4, C14-C6
+  selectMux1Ch(8);
+  selectMux2Ch(0);
 
       
-  // Measure at channels C2-C10
+  // Measure at channels C2-C10, C4-12, C6-C14, C0-C8
   selectMux3Ch(2);
   selectMux4Ch(10);
  
