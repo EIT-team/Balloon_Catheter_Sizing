@@ -331,7 +331,7 @@ for axis_a = axislist;
 
     inv_mdl.hyperparameter.value = 10^(-1); % check 0.1 to 0.01 ...
     % MDL_2.inv_solve_gn.elem_working = 'log_conductivity';
-    inv_mdl.jacobian_bkgnd.value= 1; % check
+    inv_mdl.jacobian_bkgnd.value= 0.05; % check
     inv_mdl.fwd_model.coarse2fine = ...
            mk_coarse_fine_mapping(fine_mdl, coarse_mdl);
 
