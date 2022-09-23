@@ -1,6 +1,6 @@
 # Balloon Catheter Sizing
 
-Software and firmware for balloon catheter sizing using Electrical Impedance Tomography [link to paper]()
+Software and firmware for "Lumen Shape Reconstruction using a Soft Robotic Balloon Catheter and Electrical Impedance Tomography" as presented at IROS 2022 [figshare](https://doi.org/10.6084/m9.figshare.16784038) or [arxiv](https://arxiv.org/abs/2207.12536)
 
 ## Requirements
 
@@ -15,7 +15,7 @@ Software and firmware for balloon catheter sizing using Electrical Impedance Tom
 
 ## Folder overview
 
-- [Cristina Masters](/Cristina_Masters/) - Files for Cristina's Masters and [conference paper](https://zenodo.org/record/4635480) 
+- [Cristina Masters](/Cristina_Masters/) - Files for Cristina's Masters and [conference paper](https://zenodo.org/record/4940249) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4940249.svg)](https://doi.org/10.5281/zenodo.4940249)
 - [hardware](/hardware/) - CAD files for Catheter and FPC, Arduino Motor controllers
 - [numerical_analysis](/numerical_analysis/) - Scripts for analysis of the optimal electrode configuration
 - [imaging](/imaging/) - Scripts to generate EIT images
